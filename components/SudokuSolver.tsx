@@ -70,7 +70,7 @@ const SudokuSolver: React.FC = () => {
                   } ${
                     selectedCell?.row === rowIndex &&
                     selectedCell?.col === colIndex
-                      ? "bg-blue-100"
+                      ? "bg-blue-200"
                       : ""
                   } ${
                     colIndex % 3 === 2 && colIndex !== 8
