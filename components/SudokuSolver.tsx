@@ -66,11 +66,11 @@ const SudokuSolver: React.FC = () => {
                 <td
                   key={colIndex}
                   className={`w-10 h-10 md:w-12 md:h-12 text-3xl text-center cursor-pointer ${
-                    cell === 0 ? "bg-gray-200" : "bg-white"
+                    cell === 0 ? "bg-gray-100" : "bg-white"
                   } ${
                     selectedCell?.row === rowIndex &&
                     selectedCell?.col === colIndex
-                      ? "bg-blue-200"
+                      ? "bg-blue-300"
                       : ""
                   } ${
                     colIndex % 3 === 2 && colIndex !== 8
