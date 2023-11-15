@@ -66,13 +66,6 @@ const SudokuSolver: React.FC = () => {
                 <td
                   key={colIndex}
                   className={`w-10 h-10 md:w-12 md:h-12 text-3xl text-center cursor-pointer ${
-                    cell === 0 ? "bg-gray-100" : "bg-white"
-                  } ${
-                    selectedCell?.row === rowIndex &&
-                    selectedCell?.col === colIndex
-                      ? "bg-blue-300"
-                      : ""
-                  } ${
                     colIndex % 3 === 2 && colIndex !== 8
                       ? "border-r-2 border-r-black"
                       : ""
@@ -80,7 +73,15 @@ const SudokuSolver: React.FC = () => {
                     rowIndex % 3 === 2 && rowIndex !== 8
                       ? "border-b-2 border-b-black"
                       : ""
-                  } border border-gray-300 transition-all`}
+                  } border border-gray-300 transition-all  ${
+                    (cell === 0 &&
+                      selectedCell?.row === rowIndex &&
+                      selectedCell?.col === colIndex) ||
+                    (selectedCell?.row === rowIndex &&
+                      selectedCell?.col === colIndex)
+                      ? "bg-blue-100"
+                      : "bg-white"
+                  }`}
                   onClick={() => handleCellClick(rowIndex, colIndex)}
                 >
                   {cell !== 0 ? cell : ""}
