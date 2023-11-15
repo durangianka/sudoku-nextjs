@@ -19,3 +19,9 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Application Structure
+
+- app folder => Next.js 13^ new App Router folder structure
+- components => folder that contains all the client and server components
+- sudoku-utils.ts => utils file which contains all the functions for solving a sudoku puzzle
