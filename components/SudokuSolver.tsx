@@ -95,7 +95,7 @@ const SudokuSolver: React.FC = () => {
 
   const renderNumberPad = () => {
     return (
-      <div className="grid grid-cols-3 grid-rows-3 gap-x-8 gap-y-4 md:gap-4 ">
+      <div className="grid grid-cols-3 grid-rows-3 gap-x-8 gap-y-4 md:gap-6 ">
         {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
           <button
             key={num}
@@ -135,7 +135,7 @@ const SudokuSolver: React.FC = () => {
             )}
           </button>
           <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-8 rounded disabled:opacity-20 transition-all"
+            className="bg-red-500 hover:bg-red-700 text-white font-bold py-3 px-6 rounded disabled:opacity-20 transition-all"
             onClick={handleRestartClick}
             disabled={isSolving}
           >
